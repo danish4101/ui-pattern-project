@@ -1,0 +1,18 @@
+body {
+  background-color: rgba(0, 0, 0, 0.566);
+}
+
+h1 {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+div {
+  text-align: right;
+
+}
+
+button {
+  color: rgb(0, 0, 0, );
+  font-family: 'Courier New', Courier, monospace;
+}
