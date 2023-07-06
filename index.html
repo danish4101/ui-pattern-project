@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ui Project</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div>
+
+  </div>
+  <div>
+    <button class="button" onclick="refreshPage()">Randomize</button>
+  </div>
+  <h1>Quotes!!!</h1>
+  <ul></ul>
+
+  <script>
+    function refreshPage() {
+      window.location.reload();
+    }
+    fetch('https://api.breakingbadquotes.xyz/v1/quotes')
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        data.forEach(user => {
+          const markup = `<li>${user.quote}</li>`;
+
+          document.querySelector('ul').insertAdjacentHTML(`beforeend`, markup)
+        });
+      })
+      .catch(error => console.log(error));
+
+  </script>
+</body>
+
+</html>
